@@ -10,7 +10,7 @@
 
 (defrecord TTLBuilder [config]
   builder/Builder
-  (build-renderer [_ file-path template-resolver expected-renderer]
+  (build-renderer [_ file-path template-resolver expected-renderer sanitizer]
     (let [{:keys [ttl
                   type
                   executor]
@@ -29,7 +29,7 @@
                                        (println "Error reloading template:" (.getMessage e))))) ttl ttl type))
 
       (fn [context]
-        (renderer/render expected-renderer @template context)))))
+        (renderer/render expected-renderer @template context sanitizer)))))
 
 (defn build-ttl-renderer
   ([file-path]
@@ -40,7 +40,7 @@
                       type
                       executor]
                :or   {template-resolver (rcr/->ResourceResolver)
-                      renderer          (->StringRenderer {})
+                      renderer          (->StringRenderer)
                       ttl               7
                       executor          nil
                       type              TimeUnit/DAYS}}]
@@ -50,4 +50,5 @@
                                          :type     type})
                            file-path
                            template-resolver
-                           renderer)))
+                           renderer
+                           nil)))
