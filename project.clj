@@ -1,4 +1,4 @@
-(defproject org.clojars.jj/majavat-ttl-builder "1.0.0"
+(defproject org.clojars.jj/majavat-ttl-builder "1.0.1"
   :description "TTL Builder is an extension to majavat that allows scheduling cache reloading."
   :url "https://github.com/ruroru/majavat-ttl-builder"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
