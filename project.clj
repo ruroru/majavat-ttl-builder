@@ -12,11 +12,12 @@
                                     :password :env/clojars_pass}]]
 
   :profiles {:test {:global-vars    {*warn-on-reflection* true}
-                    :dependencies   [[ch.qos.logback/logback-classic "1.5.23"]
+                    :dependencies   [[ch.qos.logback/logback-classic "1.5.24"]
                                      [mock-clj "0.2.1"]]
                     :resource-paths ["test-resources"]}}
 
   :plugins [[org.clojars.jj/bump "1.0.4"]
+            [org.clojars.jj/lein-git-tag "1.0.0"]
             [org.clojars.jj/strict-check "1.1.0"]
             [org.clojars.jj/bump-md "1.1.0"]]
 
