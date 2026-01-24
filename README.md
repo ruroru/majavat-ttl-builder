@@ -4,7 +4,7 @@ TTL Builder is an extension to [majavat](https://github.com/ruroru/majavat) that
 ## installation
 
 ```clojure
-[org.clojars.jj/majavat-ttl-builder "1.0.1"]
+[org.clojars.jj/majavat-ttl-builder "1.0.2"]
 ```
 
 ## Usage
