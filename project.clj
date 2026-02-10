@@ -12,7 +12,7 @@
                                     :password :env/clojars_pass}]]
 
   :profiles {:test {:global-vars    {*warn-on-reflection* true}
-                    :dependencies   [[ch.qos.logback/logback-classic "1.5.28"]
+                    :dependencies   [[ch.qos.logback/logback-classic "1.5.29"]
                                      [mock-clj "0.2.1"]]
                     :resource-paths ["test-resources"]}}
 
