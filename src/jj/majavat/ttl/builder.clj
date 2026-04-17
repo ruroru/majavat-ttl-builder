@@ -1,10 +1,12 @@
 (ns jj.majavat.ttl.builder
-  (:require [jj.majavat.builder :as builder]
+  (:require
             [jj.majavat.parser :as parser]
-            [jj.majavat.renderer :as renderer]
+            [jj.majavat.protocol.renderer.render-target :as renderer]
+            [jj.majavat.protocol.builder :as builder]
             [jj.majavat.renderer :refer [->StringRenderer]]
             [jj.majavat.resolver.resource :as rcr])
-  (:import (java.util.concurrent ScheduledThreadPoolExecutor TimeUnit)))
+  (:import (java.util.concurrent ScheduledThreadPoolExecutor TimeUnit)
+           ))
 
 (def ^:private default-executor (ScheduledThreadPoolExecutor. 1))
 (def ^:private sanitizer {})
